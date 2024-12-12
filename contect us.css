@@ -1,0 +1,122 @@
+/* إعدادات عامة */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: #2c3e50;
+}
+
+/* رأس الصفحة */
+h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-top: 20px;
+    color:red;
+}
+
+/* تنسيق الروابط */
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* الفاصل */
+hr {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+}
+
+/* تنسيق المحتوى */
+.content, .content2 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 20px;
+}
+
+.item2, .item3, .item1 {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+}
+
+.item2:hover, .item3:hover, .item1:hover {
+    transform: translateY(-10px);
+}
+
+.item2 img, .item1 img, .item3 img {
+    margin-top: 10px;
+    border-radius: 50%;
+}
+
+/* تنسيق الأيقونات */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* تنسيق الأزرار */
+a img {
+    transition: transform 0.3s ease-in-out;
+}
+
+a img:hover {
+    transform: scale(1.1);
+}
+
+/* فاصل footer */
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 0.9rem;
+    color: #777;
+    background-color: #fff;
+    padding: 15px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* تصميم متجاوب */
+@media (max-width: 768px) {
+    .content, .content2 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item2, .item1, .item3 {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .item2, .item1, .item3 {
+        width: 90%;
+    }
+
+    .footer {
+        font-size: 0.8rem;
+    }
+}

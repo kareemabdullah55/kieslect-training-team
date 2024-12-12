@@ -1,0 +1,347 @@
+/* Reset some basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic body setup */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  color: #333;
+}
+
+
+/* Dark mode styling */
+/* تصميم الزر */
+/* الوضع العادي */
+body {
+  background-color: white;
+  color: black;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* وضع الظلام */
+body.dark-mode {
+  background-color: #121212;
+  color: white;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #666;
+}
+
+/* Header and navigation */
+header {
+  background-color: #333;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+}
+
+header nav {
+  width: 100%;
+  background-color: #333;
+  padding: 10px 20px;
+}
+
+header nav ul {
+  list-style-type: none; /* إزالة العلامات النقطية */
+  margin: 0;
+  padding: 0;
+  display: flex; /* لجعل العناصر بجانب بعضها */
+  justify-content: center; /* توزيع العناصر بحيث يكون زر الـ Dark Mode في أقصى اليمين */
+  align-items: center; /* محاذاة العناصر عموديًا */
+  
+}
+
+header nav ul li {
+  margin: 0 15px; /* مسافة بين العناصر */
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+header nav ul li a:hover {
+  color: red; /* تغيير اللون عند المرور على الرابط */
+}
+button {
+  padding: 10px 20px;
+  background-color: #444;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+button:hover {
+  background-color: #666;
+}
+/* الدفع لليمين فقط لزر Dark Mode */
+ul .dark-mode-btn {
+  margin-left: auto; /* دفع الزر إلى أقصى اليمين */
+}
+
+#dark-mode-toggle:hover {
+  background-color: #555;
+}
+
+
+/* Logo section */
+.logo {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.logo img {
+  max-width: 100%;
+  height: auto;
+}
+
+.logo h1 {
+  color: red;
+  font-size: 2rem;
+  margin-top: 10px;
+}
+
+/* Container for the image slider */
+/* Main container for the image slider */
+.image-slider-wrapper {
+  width: 100%;
+  height: 300px; /* Fixed height for the images */
+  overflow: hidden; /* Hide images that overflow the container */
+  position: relative;
+  display: flex;
+  justify-content: center; /* Center the slider horizontally */
+  align-items: center; /* Center the slider vertically */
+}
+
+/* The sliding container */
+.image-slider {
+  display: flex;
+  width: 400%; /* Enough space to hold 4 images */
+  animation: slide 16s infinite linear; /* Continuous animation with constant speed */
+}
+
+/* Style for each image */
+.image-slider img {
+  width: 25%; /* Each image takes 25% of the width of the container */
+  height: 100%; /* Images will take full height of the container */
+  object-fit: cover; /* Preserve aspect ratio and prevent image distortion */
+  flex-shrink: 0; /* Prevent the images from shrinking */
+}
+
+/* Keyframes for sliding the images */
+@keyframes slide {
+  0% {
+    transform: translateX(0); /* Start at the first position */
+  }
+  100% {
+    transform: translateX(-100%); /* Move all the images to the left */
+  }
+}
+
+/* Media Queries for responsiveness */
+
+/* For tablets and smaller screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .image-slider-wrapper {
+    height: 200px; /* Adjust height for smaller screens */
+  }
+  
+  .image-slider img {
+    width: 33.33%; /* Each image takes 1/3 of the screen width */
+  }
+}
+
+/* For mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .image-slider-wrapper {
+    height: 150px; /* Adjust height for mobile screens */
+  }
+  
+  .image-slider img {
+    width: 100%; /* Each image will take the full width of the screen */
+  }
+}
+
+
+
+/* User sections */
+.user {
+  text-align: center;
+  padding: 20px;
+}
+
+.user h1 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.user h2 {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.user img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+/* Container and search section */
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+#search-bar {
+  padding: 10px;
+  width: 80%;
+  max-width: 400px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+/* Table styles */
+table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 10px;
+  text-align: left;
+  border: 1px solid #ddd;
+}
+
+table td a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+table td a:hover {
+  text-decoration: underline;
+}
+
+#no-result {
+  color: red;
+  display: none;
+}
+
+/* About section */
+.new-users {
+  text-align: center;
+  padding: 20px;
+}
+
+.new-users h2 {
+  font-size: 1.5rem;
+  margin: 20px 0;
+}
+
+.new-users a {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.new-users img.respon {
+  max-width: 100%;
+  height: auto;
+  transition: transform 0.5s ease;
+}
+
+.new-users img.respon:hover {
+  transform: scale(1.1);
+}
+/* إخفاء الصفوف بشكل افتراضي */
+.data-row.hidden {
+  display: none;
+}
+
+/* إخفاء الجدول حتى يتم البحث */
+#data-table {
+  display: none;
+}
+
+/* Responsive Design for mobile devices */
+@media only screen and (max-width: 768px) {
+  header nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  .logo h1 {
+    font-size: 1.5rem;
+  }
+
+  #search-bar {
+    width: 90%;
+  }
+
+
+  }
+
+
+/* Responsive Design for small screens (phones) */
+@media only screen and (max-width: 480px) {
+  .logo h1 {
+    font-size: 1.2rem;
+  }
+
+  #search-bar {
+    width: 100%;
+  }
+
+  .container {
+    padding: 10px;
+  }
+
+  button {
+    width: 100%;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  .new-users h2 {
+    font-size: 1.2rem;
+  }
+  
+}

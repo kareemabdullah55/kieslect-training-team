@@ -1,0 +1,195 @@
+/* إعادة تعيين بعض الأنماط الافتراضية */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* خلفية عامة */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f9fc;
+    color: #333;
+    line-height: 1.7;
+}
+
+/* رأس الصفحة */
+header {
+    background-color:black;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color:red;
+}
+
+/* مقدمة */
+#intro {
+    text-align: center;
+    padding: 80px 20px;
+    background-color:gainsboro;
+    color: black;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+#intro h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#intro p {
+    font-size: 1.3em;
+    margin-bottom: 30px;
+    line-height: 1.8;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 800px;
+    border-radius: 15px;
+    margin-top: 30px;
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* قسم المهارات */
+#skills {
+    padding: 60px 20px;
+    background-color: #ffffff;
+}
+
+#skills h2 {
+    font-size: 2.8em;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #333;
+    font-weight: bold;
+}
+
+.skill-item {
+    display: inline-block;
+    width: 30%;
+    margin: 20px 1.5%;
+    background-color: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+}
+
+.skill-image {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border: 4px solid red;
+}
+
+.skill-item h3 {
+    font-size: 1.8em;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.skill-item p {
+    font-size: 1.1em;
+    color: #666;
+    line-height: 1.5;
+}
+
+.skill-item p strong {
+    font-weight: 600;
+    color: #333;
+}
+
+/* قسم الخاتمة */
+#conclusion {
+    padding: 50px 20px;
+    background-color: #f7f9fc;
+    text-align: center;
+    border-top: 2px solid #ddd;
+}
+
+#conclusion h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+#conclusion p {
+    font-size: 1.2em;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+#conclusion strong {
+    color: #333;
+}
+
+/* تحسينات للجهاز المحمول */
+@media (max-width: 768px) {
+    #skills h2 {
+        font-size: 2.4em;
+    }
+
+    .skill-item {
+        width: 100%;
+        margin: 15px 0;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    #intro h1 {
+        font-size: 2.5em;
+    }
+
+    #intro p {
+        font-size: 1.1em;
+    }
+
+    nav ul {
+        flex-direction: column;
+        margin-top: 0;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
